@@ -1,0 +1,338 @@
+
+
+/* create a css by *{ } inside is margine, padding, box-sizing      */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/*make the website pages w/ bullets(home, products, about, contact, be upper right corner, stacked, and 20pt text*/
+
+
+nav{/* nav tag for logo?*/
+    flex: 1;
+    text-align: right; /*menu on the right side*/
+
+}
+
+nav ul{   /*tag for list home, products etc */
+    display: inline-block; /*make it so nav list all in one line (home, products etc)*/
+    list-style-type: none; /*gets rid of the bullet points*/
+}
+
+nav ul li{ /*list tag makes nav list come from right side */
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a{ /*anchor tag*/
+    text-decoration: none;
+    color: #555;
+}
+
+p{ /*all p tags are same colour */
+    color: #555;
+}
+
+
+.container{ /*styles the classes, makes home products, nav bar equal width from each other */
+    max-width:1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+
+.row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis:50%; /* both columns occupy 50% and min-width is 300 px  */
+    min-width: 300px;
+}
+
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0; /* padding from 0 px  (top and bottom) 50 px (left and right) */
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+
+.btn{ /*basically a button */
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px; 
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s; /*lag of 0.5 s*/
+}
+.btn:hover{
+    background: #563434;
+
+}
+
+.header{
+    background: radial-gradient(#fff, #ffd6d6); /*first colour is center*/
+}
+
+.header .row{
+    margin-top: 70px; 
+}
+
+.col-3{
+    flex-basis: 30%; /** col take 30% each*/
+    min-width:250px;
+    margin-bottom: 30px; 
+}
+
+.col-3 img{
+    width: 100%; /*changes the width so it spreads out*/
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s; /*this connects with the hover function down below*/
+}
+.col-4 img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 0px auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{ /**creates a line the red at featured products*/
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /*center on x axis*/
+}
+
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px; /*for the little product titles t shirt ie. */
+}
+.rating .fa{
+    color: #ff523b;
+}
+
+.col-4:hover{
+    transform: translateY(-5px); /*creates an action when you hover, moves 5 px y dir*/
+}
+
+
+/*-----------offer-------------*/
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.col-2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555; /*text or caption for the mibrand*/
+}
+
+/*--------------------testimonial---------------*/
+
+.testimonial{
+    padding-top: 100px;
+}
+
+.testimonial .col-3{ /*so im assuming that the . means that its inside the div testimonial and targetting the col-4*/
+    text-align: center;
+    padding: 40px 20px 40px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1); /*box shadowc appearance */
+    cursor: pointer;
+    transition: transform .5s; /*create action for button: (connects to .testimonial .col-3:hover time lag 0.5  trasntiion: transform .5s; 
+}
+.testimonial .col-3 img{ /*small user image */
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0px;
+    color: #777;
+}
+
+.testimonial .col-3 h3{ /*style for col-3 in testimonial in h3*/
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.testimonial .col-3:hover{
+    transform: translateY(-10px); /*transform: [whatever is going to happen to the div]*/
+}
+
+/*--------------- brands ------------*/
+
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+/*---------footer-------*/
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col1,.footer-col2,.footer-col3,.footer-col4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col1{
+    flex-basis: 30%;
+}
+.footer-col2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col3,.footer-col4{
+    flex-basis: 12%;
+    text-align: center;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.footer li{
+    display: block;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin:  20px 0;
+}
+.copyright{
+    text-align: center;
+    
+}
+
+/*-------media-query-for-max-width-800---------*/
+
+
+@media only screen and (max-width: 800px) {
+
+    
+nav ul{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    max-height: 0;
+    transition:max-height 0.5s;
+    }
+    
+nav ul li{
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+nav ul li a{
+        color: #fff;
+    }
+    
+.menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    
+
+}
+/*---------- 600 media query -------*/
+@media only screen and (max-width: 600px){
+    
+    .row{
+      text-align: center;
+    }
+    
+    .col-1, .col-2, .col-3, .col-4{
+        
+        flex-basis: 100%;
+    }
+}
